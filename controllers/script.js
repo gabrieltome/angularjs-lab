@@ -1,12 +1,12 @@
 // Code goes here
-var app = angular.module( "app1", []);
-
-app.controller( 'controller1', function($scope){
-  $scope.user = user;
-});
+var app = angular.module("app1", []);
 
 var user = {
   name: 'Goku',
-  idade: 25,
-  sexo: 'm'
+    type: 'Sayajin'
 };
+
+app.controller('controller1', function ($scope) {
+  $scope.user = user;
+});
+
