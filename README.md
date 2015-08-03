@@ -1,3 +1,7 @@
 # AngularJS Labs
 
-## This is a lab repository to AngularJS.
+This repository is to share some of my code [AngularJS] studies.
+
+By [@gabrieltdev]
+[@gabrieltdev]:http://twitter.com/gabrieltdev
+[AngularJS]:http://angularjs.org
