@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="app1">
+
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js" ></script>
+    
+    
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div class=container ng-controller="controller1">
+       <div class="panel panel-primary container" ng-repeat="user in users | orderBy:'name' ">
+          <h1>Name: {{user.name | uppercase }}</h1>
+          <p>Type: {{user.type | uppercase }}</p>
+          <p>Agility: {{user.agility}}</p>
+          <p>Power: {{user.power}}</p>
+          <p>
+              <button ng-disabled="user.power<60" ng-click="user.power=user.power-1" class="btn btn-primary">Punch!</button>
+          </p>
+          <p>
+              <button ng-disabled="user.agility<60" ng-click="user.agility=user.agility-1" class="btn btn-primary">Fly!</button>
+          </p>
+       </div>
+        
+    </div>
+  </body>
+
+</html>
