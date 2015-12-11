@@ -124,11 +124,48 @@ Operações que são calculadas e transformadas em HTML.
 {{ custo * quantidade }}
 ```
 
-#####Definição do módulo
+
+###MVC
+
+- **Model** - Responsável pelo armazenamento e recuperação dos dados
+
+- **View** - Responsável pela apresentaçnao de dados ao usuário
+
+- **Controller** - Responsável pelo comportamento da aplicação e pela preparação dos dados para apresentação ao usuário
+
+###Controller
+
+Controlador é criado por meio do método *controller* da aplicação.
+
+######Syntax
+
+```
+var app = angular.module( 'app1', []);
+
+app.controller('NOME DO CONTROLADOR', function($scope) {
+	
+});
+
+```
+
+Os dados em JSON são referenciados dentro do controlador por meio do *objeto de aplicação* **$scope**.
+
+######Example
+
+```
+var app = angular.module( 'app1', []);
+
+app.controller('controller1', function($scope) {
+	$scope.aluno = 'Gabriel Tomé';  // criação de uma string nesse objeto de aplicação
+});
+```
+
+No HTML, utilizamos a *diretiva* **ng-controller** para realizar o vínculo.
 
 
 ```
-<p> {{ "Olá " + "Mundo" }} </p>
+<div ng-controller="controller1">
+	<h1>Olá, {{ aluno }} </h1>
+</div>
 ```
-
 
